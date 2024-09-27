@@ -21,4 +21,5 @@ router.get('customers', [ClientController, 'listPaginate'])
 router.post('customers', [ClientController, 'create'])
 
 router.get('payments', [PaymentController, 'listPaginate'])
-router.post('payments', [PaymentController, 'createBoletoOrPix'])
+router.post('payments/boleto', [PaymentController, 'createUniqueBoletoOrPix'])
+router.post('payments/creditCard', [PaymentController, 'createCreditCard'])
